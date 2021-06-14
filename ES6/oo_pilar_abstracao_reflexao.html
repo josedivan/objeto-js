@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>oo-funçôes-reflexão</title>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    // um software de marcenaria
+    // cadeira e sofá 
+
+    // paradgma procedural
+
+    // array construtor de cadeiras 
+    // let cadeiras = Array()
+
+    // instnaciar cadeiras
+    /*
+   cadeiras[0] = Array()
+   cadeiras[0]['qtde_pernas'] = 4;
+   cadeiras[0]['giratoria'] = false
+   cadeiras[0]['cor'] = 'Azul'
+
+   // cadeira 2
+   cadeiras[1] = Array()
+   cadeiras[1]['qtde_pernas'] = 1;
+   cadeiras[1]['giratoria'] = true
+   cadeiras[1]['cor'] = 'preta'
+   */
+
+    /*
+        function cadeira_giratoria(indice) {
+          if (cadeiras[indice]['giratoria'] === true) {
+            console.log("girou")
+          } else {
+            console.log("Cadeira não é giratória")
+          }
+        }
+    */
+
+    /*
+        function adicionarCadeiras(qtde_pernas, giratoria, cor) {
+
+          let cadeiras = Array()
+
+          cadeiras['qtde_pernas'] = qtde_pernas
+          cadeiras[' giratoria'] = giratoria
+          cadeiras['cor'] = cor
+
+          cadeiras.push(cadeiras)
+
+        }
+        adicionarCadeiras(3, false, 'marron')
+        adicionarCadeiras(1, false, 'verde')
+
+        console.log(cadeiras)
+
+        cadeira_giratoria(1)
+        */
+
+    // PARADGIMAS ORIENTAÇÃO A OBJETOS 
+    class cadeira {
+      constructor(qtde_pernas, giratoria, cor) {
+        this.qtde_pernas = qtde_pernas
+        this.giratoria = giratoria
+        this.cor = cor
+      }
+      cadeiraGiratoria() {
+        if (this.giratoria === true) {
+          console.log("Cadeira giaratória")
+        } else {
+          console.log("Cadeira não é giratória")
+        }
+      }
+    }
+    //let cadeira1 = new cadeira(4, false, "azul")
+    // Criando mais uma cadeira, cria-se uma nova instancia.
+    //let cadeira2 = new cadeira(4, true, "vermelha")
+    // criando um array de cadeira para o objeto.
+
+    let cadeiras = Array()
+    cadeiras.push(new cadeira(4, false, "azul"))
+    cadeiras.push(new cadeira(3, true, "Verde"))
+
+
+    console.log(cadeiras)
+
+
+  </script>
+</head>
+
+<body>
+  <div id="output"></div>
+</body>
+
+</html>

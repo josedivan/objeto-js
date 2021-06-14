@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+
+
+    // modelo do objeto 
+    class contaBancaria {
+      agencia
+      numeroConta
+      saldo
+      limite
+      constructor() {
+        this.agencia = 1004
+        this.numeroConta = 10556
+        this.saldo = 50
+        this.limite = 450
+      }
+      // Acoes e métodos do objeto 
+      depositar(valorDepositar) {
+        this.saldo += valorDepositar
+      }
+      sacar(ValorSaque) {
+        this.saldo -= ValorSaque
+      }
+      consultarSaldo(valorSaldo) {
+        return this.saldo
+
+      }
+
+    }
+    // Aqui podemos instanciar e recuperar os atributos e métodos da classe/ ou seja uma entidade da classe ContaBancária
+
+    let x = new contaBancaria()
+    let y = new contaBancaria()
+    // Acessando o método 
+    x.depositar(450)
+    x.depositar(-50)
+    x.sacar(100)
+    console.log(x.consultarSaldo())
+
+  </script>
+</head>
+
+<body>
+  <div id="output"></div>
+</body>
+
+</html>

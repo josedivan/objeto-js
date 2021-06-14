@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>literais melhorias </title>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+
+    let nome = 'Edivan'
+    let idade = 32;
+    let sexo = 'Masculino'
+    let profissao = 'Programador'
+
+    let objeto = {
+      nome: nome,
+      idade: idade,
+      sexo: sexo,
+      profissao: profissao,
+      exibiResumo: function () {
+        console.log(` ${this.nome} ${this.idade} anos ${this.sexo} ${this.profissao}`)
+      }
+    }
+
+    let objeto2 = {
+      nome,
+      idade,
+      sexo,
+      profissao,
+      exibiResumo() {
+        console.log(` ${this.nome} ${this.idade} anos ${this.sexo} ${this.profissao}`)
+      }
+    }
+    console.log(objeto)
+    objeto.exibiResumo()
+
+    console.log(objeto2)
+    objeto2.exibiResumo()
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
