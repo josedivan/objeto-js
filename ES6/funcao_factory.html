@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> funções Factory </title>
+
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+
+    let factoryBicicleta = function (cor, aro, marcha, pedalar) {
+      // Dentro da função define os objetos literais
+      return {
+        cor,
+        aro,
+        marcha,
+        pedalar() {
+          console.log("Método pedalar")
+        }
+      }
+    }
+
+    // Variaveis que recebe a função que retorna a função de objetos.
+    let bicicleta1 = factoryBicicleta('Preta', 26, 18)
+    console.log(bicicleta1)
+    let bicicleta2 = factoryBicicleta('Azul', 29, 21)
+    console.log(bicicleta2)
+
+    // Pessoas
+
+    let pessoas = function (nome, sobreNome, idade, peso, altura) {
+      return {
+        nome,
+        sobreNome,
+        idade,
+        peso,
+        altura,
+        falaNome() {
+          console.log(`meu nome e sobrenome é : ${this.nome} ${this.sobreNome}`)
+        }
+      }
+    }
+
+    let pessoa1 = pessoas("Jose", 'Lima', 32, 80, 1.74)
+    console.log(pessoa1)
+    pessoa1.falaNome()
+
+
+    let pessoa2 = pessoas('Judith', 'Ramos', 33, 60, 1.58)
+    console.log(pessoa2)
+    pessoa2.falaNome()
+
+
+
+
+
+  </script>
+
+</head>
+
+<body>
+  <div id="output"></div>
+</body>
+
+</html>
