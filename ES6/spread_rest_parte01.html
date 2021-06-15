@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> funções Factory </title>
+
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    // ocntexto spread 
+    // string 
+
+    let tituloArtigo = 'Como utilizar o operador rest/spread'
+    console.log(tituloArtigo)
+    console.log(...tituloArtigo)
+
+    let listaCursos1 = ['NodeJs e mongo', 'ES6', 'Typescript e Angular 4']
+    let listaCursos2 = ['Multiplataforma android/IOS', 'Introdução ao Gnu/linux']
+
+    let listaDeCurosCompleto = [...listaCursos1, 'web completo', ...listaCursos2]
+
+    console.log(listaDeCurosCompleto)
+
+  </script>
+
+</head>
+
+<body>
+  <div id="output"></div>
+</body>
+
+</html>
